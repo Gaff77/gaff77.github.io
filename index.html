@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MusaPeli</title>
+<meta name="description" content="MusaPeli – coming soon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0b0716; --bg2: #1a0f2e; --ink: #ece6ff; --dim: #a99cc9;
+    --pink: #ff4fd8; --cyan: #2de2e6; --yellow: #ffd319; --line: rgba(45, 226, 230, 0.35);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: radial-gradient(ellipse at 50% -10%, #3a1650 0%, var(--bg2) 40%, var(--bg) 75%);
+    background-color: var(--bg);
+    color: var(--ink);
+    font: 17px/1.6 Inter, system-ui, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  .grid {
+    position: fixed; left: -50%; right: -50%; bottom: 0; height: 45vh; z-index: -1;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 60px 60px;
+    transform: perspective(300px) rotateX(60deg);
+    transform-origin: bottom;
+    mask-image: linear-gradient(to top, black 10%, transparent 90%);
+    -webkit-mask-image: linear-gradient(to top, black 10%, transparent 90%);
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 28vh 16px 96px; text-align: center; }
+  h1 {
+    font-family: "Press Start 2P", monospace; font-size: clamp(32px, 8vw, 64px); margin: 0 0 12px;
+    color: var(--yellow);
+    text-shadow: 4px 4px 0 #6a1b6e, 0 0 24px rgba(255, 211, 25, 0.45);
+    letter-spacing: 2px;
+  }
+  .tag { font-family: "Press Start 2P", monospace; font-size: 12px; color: var(--cyan); letter-spacing: 1px; margin-bottom: 56px; }
+  footer { font-size: 14px; color: var(--dim); border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 24px; }
+  footer a { color: var(--cyan); }
+</style>
+</head>
+<body>
+<div class="grid" aria-hidden="true"></div>
+<main>
+  <h1>MUSAPELI</h1>
+  <div class="tag">COMING SOON</div>
+
+  <footer>
+    <p>Song tempo data: <a href="https://getsongbpm.com">GetSongBPM.com</a></p>
+    <p>&copy; 2026 MusaPeli</p>
+  </footer>
+</main>
+</body>
+</html>
